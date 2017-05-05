@@ -1,6 +1,6 @@
 \documentclass{article}
 \usepackage[utf8]{inputenc}
-
+\usepackage{graphicx}
 \title{NP-Complete graph problems - KombSøg 2017}
         \author{Anders H Pedersen }
         \date{May 2017}
@@ -15,30 +15,37 @@
 \section{Graph problems}
 \subsection{INDEPENDENT SET}
 \textbf{Given:} Graph G = (V,E), target K. \\
-\textbf{Question:} Does there exist $ \subseteq$ \\
+\textbf{Question:} Does there exist $I \subseteq V$ such that $|I| \geq K$\\ and for all $u,v\in I$ we have $(u,v) \notin E$? 
 \subsection{CLIQUE}
-\textbf{Given:} \\
-\textbf{Question:} \\
+\textbf{Given:} Graph G = (V,E), target K. \\
+\textbf{Question:} Does there exist $C \subseteq V$ such that $|C| \geq K$\\ and for all $u,v\in C$ we have $(u,v) \in E$?
 \subsection{VERTEX COVER}
-\textbf{Given:} \\
-\textbf{Question:} \\
+\textbf{Given:} Graph G = (V,E), budget B. \\
+\textbf{Question:} Does there exist $C \subseteq V$ such that $|C| \leq B$\\
+and for all $(u,v) \in E$ we have $(u \in C \lor v \in C)$?
 \subsection{MAX CUT}
-\textbf{Given:} \\
-\textbf{Question:} \\
-\subsection{BISECTION}
-\textbf{Given:} \\
-\textbf{Question:} \\
+\textbf{Given:} Graph G = (V,E), target K. \\
+\textbf{Question:} Does there exist a cut  $(S,V\setminus S)$ of size at least K?\\
+\subsection{MAX BISECTION}
+\textbf{Given:} Graph G = (V,E), target K.\\
+\textbf{Question:} Does there exist a cut  $(S,V\setminus S)$ of size at least K, such that $|S| =  |V \setminus S|$?
+\subsection{BISECTION WIDTH}
+\textbf{Given:} Graph G = (V,E), target K.\\
+\textbf{Question:} Does there exist a cut  $(S,V\setminus S)$ of size at most K, such that $|S| =  |V \setminus S|$?
 \subsection{HAMILTONIAN PATH}
-\textbf{Given:} \\
-\textbf{Question:} \\
+\textbf{Given:} Graph G = (V,E).\\
+\textbf{Question:} Does G have a path that visits every vertex exactly once?\\
 \subsection{TSP}
-\textbf{Given:} \\
-\textbf{Question:} \\
+\textbf{Given:} Distance matrix D, target t. \\
+\textbf{Question:} Is there a tour of length at most t that visits every node in the graph defined by D exactly once?\\
 \section{Reductions}
-As always, in a reduction $L_1 \le L_2$, we describe a polynomial time computable function r, such that $\forall x: x\in L_1 \iff r(x) \in L_2$. We then argue that it is indeed polynomial, and that both directions of the bi-implication holds.
+As always, in a reduction $L_1 \le L_2$, we describe a polynomial time computable function r, such that $\forall x: x\in L_1 \iff r(x) \in L_2$. We then argue that it is indeed polynomial, and that both directions of the bi-implication holds.\\\\
 \subsection{3SAT $\le$ INDEPENDENT SET}
 We prove \textbf{Theorem 9.4: INDEPENDENT SET is NP-Complete}, by reducing from 3SAT, which we know is NP-Complete.\\\\
-For this reduction we need a gadget, the triangle. The logic behind this is that, if a graph contains a triangle, then at most one of the nodes can be in the independent set. We restrict the class of graphs we consider, to graphs whose nodes can be partitioned in m disjoint triangles. 
+For this reduction we need a gadget, the triangle. The logic behind this is that, if a graph contains a triangle, then at most one of the nodes can be in the independent set. We restrict the class of graphs we consider, to graphs whose nodes can be partitioned in m disjoint triangles. This ensures that an independent set can contain at most m nodes. \\
+
+For each of the m clauses in our input CNF formula, we create a triangle where the nodes are labeled with the literals of the clause. Next we add an edge between two nodes in different triangles if and only if the nodes correspond to opposite literals. For example an edge between $x_1$ and $\lnot x_1$. Adding these edges between opposite literals, ensures that we cannot pick both (it would not be an independent set).
+\includegraphics[scale=0.5]{independentset}
 \\\\
 Read more in papadimitriou page 188-190.
 \subsection{INDEPENDENT SET $\le$ CLIQUE}
