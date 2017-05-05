@@ -45,7 +45,7 @@ As always, in a reduction $L_1 \le L_2$, we describe a polynomial time computabl
 We prove \textbf{Theorem 9.4: INDEPENDENT SET is NP-Complete}, by reducing from 3SAT, which we know is NP-Complete.\\\\
 For this reduction we need a gadget, the triangle. The logic behind this is that, if a graph contains a triangle, then at most one of the nodes can be in the independent set. We restrict the class of graphs we consider, to graphs whose nodes can be partitioned in m disjoint triangles. This ensures that an independent set can contain at most m nodes. \\
 
-For each of the m clauses in our input CNF formula, we create a triangle where the nodes are labeled with the literals of the clause. Next we add an edge between two nodes in different triangles if and only if the nodes correspond to opposite literals. For example an edge between $x_1$ and $\lnot x_1$. Adding these edges between opposite literals, ensures that we cannot pick both (it would not be an independent set). The reduction is completed by setting the independent set goal k = m. \\\\\\
+For each of the m clauses in our input CNF formula, we create a triangle where the nodes are labeled with the literals of the clause. Next, we add an edge between two nodes in different triangles if and only if the nodes correspond to opposite literals. Adding these edges between opposite literals, ensures that we cannot pick both (as it would not be an independent set). The reduction is completed by setting the independent set goal K = m. \\\\\\
 \textbf{Example:}\\\\
 Given a 3CNF formula:  $f =  (x_1 \lor x_2 \lor x_3) \land (\lnot x_1 \lor \lnot x_2 \lor \lnot x_3) \land (\lnot x_1 \lor x_2 \lor x_3)$\\
 We construct the graph shown in figure 1. \\
@@ -54,12 +54,15 @@ We construct the graph shown in figure 1. \\
 \textbf{Analysis}\\
 For each clause, we just create a triangle. Then we add at most $3 * (m-1)$ edges between the triangles - so the reduction is clearly polynomial.
 \\\\
-$\implies$ :\\ Given a satisfying assignment for the CNF formula f from above, we must show that the graph, r(f), has an indenpendent set of size K=m. The assignment: $x_1 = 0, x_2 = 1, x_3 = 0$ satisfies the formula, and for our indenpendent set of size K, we pick a node in each triangle which make the corresponding clause true. For the truth assignment we chose above, this means $x_2$ from triangle 1, $\lnot x_1$ in triangle 2, $\lnot x_1$ in triangle 3. (Note that this is not the only independent set of size K).
+$\implies$ :\\ Given a satisfying assignment for the CNF formula f from above, we must show that the graph, r(f), has an indenpendent set of size K=m. The assignment: $x_1 = 0, x_2 = 1, x_3 = 0$ satisfies the formula, and for our indenpendent set of size K, we pick a node in each triangle which make the corresponding clause true. For the truth assignment we chose above, this means $x_2$ from triangle 1, $\lnot x_1$ in triangle 2, $\lnot x_1$ in triangle 3. (Note that this is not the only valid set since some clauses are satisfied by more than one literals).
 \\\\
-$\impliedby$ :\\
-
+$\impliedby$ :\\ Given an independent set of size K of r(f), we need to show that there is a satisfying assignment for f. Since it is of size K, it must have one vertex from each triangle, and it cannot contain a variable and its negation. Now, for each vertex in the independent set, we look at the label and assign a truth value to the corresponding variable, so the literal of the label become true. If a variable is not restricted to a truth value by any vertex label, we just assign it some value, since all clauses are already satisfied by the assignments to the other variables.\\\\\\
 \textit{Read more in papadimitriou page 188-190.}
+\newpage
 \subsection{INDEPENDENT SET $\le$ CLIQUE}
+The independent set problem asks for a set of vertices of size K. So does the CLIQUE problem. While the independent set problem asks for a set S of vertices where there is no edge between any pair $u,v \in S$.
+\\\\\\
+\textit{Read more in papadimitriou page 190.}
 \subsection{INDEPENDENT SET $\le$ VERTEX COVER}
 \subsection{NAESAT $\le$ MAX CUT}
 \subsection{3SAT $\le$ HAMILTONIAN PATH}
