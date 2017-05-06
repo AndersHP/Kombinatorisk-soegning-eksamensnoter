@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2017.5.5)  5 MAY 2017 21:27
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2017.5.5)  6 MAY 2017 18:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -567,6 +567,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 48--61
  []
 
 
+Underfull \hbox (badness 10000) in paragraph at lines 48--61
+
+ []
+
+
 Overfull \hbox (63.02338pt too wide) in paragraph at lines 48--61
 []
  []
@@ -602,37 +607,53 @@ Underfull \hbox (badness 10000) in paragraph at lines 48--61
  []
 
 [2] [3 <./independentset.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 63--66
+<IStoCLIQ.png, id=24, 583.17876pt x 292.09125pt>
+File: IStoCLIQ.png Graphic file (type png)
+ <use IStoCLIQ.png>
+Package pdftex.def Info: IStoCLIQ.png used on input line 64.
+(pdftex.def)             Requested size: 291.58867pt x 146.04526pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 63--68
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 63--66
+Underfull \hbox (badness 10000) in paragraph at lines 63--68
 
  []
 
-[4] (./NPC graph probs.aux) ) 
+
+Underfull \hbox (badness 10000) in paragraph at lines 63--68
+
+ []
+
+<IStoCOVER.png, id=25, 583.17876pt x 292.09125pt>
+File: IStoCOVER.png Graphic file (type png)
+ <use IStoCOVER.png>
+Package pdftex.def Info: IStoCOVER.png used on input line 69.
+(pdftex.def)             Requested size: 291.58867pt x 146.04526pt.
+ [4 <./IStoCLIQ.png> <./IStoCOVER.png>] [5] (./NPC graph probs.aux) ) 
 Here is how much of TeX's memory you used:
- 2413 strings out of 493013
- 30684 string characters out of 6136994
+ 2423 strings out of 493013
+ 30847 string characters out of 6136994
  98756 words of memory out of 5000000
- 5931 multiletter control sequences out of 15000+600000
+ 5939 multiletter control sequences out of 15000+600000
  9369 words of font info for 34 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  39i,8n,25p,617b,189s stack positions out of 5000i,500n,10000p,200000b,80000s
-<c:/texlive/2016/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmbx10.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmbx12.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pf
-b><c:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texl
-ive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2016/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2016/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2016/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmti10.pfb>
-Output written on "NPC graph probs.pdf" (4 pages, 141538 bytes).
+<c:/texliv
+e/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2016/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2016/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2016/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmr12.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmr17.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb
+><c:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texl
+ive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on "NPC graph probs.pdf" (5 pages, 166631 bytes).
 PDF statistics:
- 56 PDF objects out of 1000 (max. 8388607)
- 38 compressed objects within 1 object stream
+ 63 PDF objects out of 1000 (max. 8388607)
+ 40 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 16 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -48,7 +48,7 @@ For this reduction we need a gadget, the triangle. The logic behind this is that
 For each of the m clauses in our input CNF formula, we create a triangle where the nodes are labeled with the literals of the clause. Next, we add an edge between two nodes in different triangles if and only if the nodes correspond to opposite literals. Adding these edges between opposite literals, ensures that we cannot pick both (as it would not be an independent set). The reduction is completed by setting the independent set goal K = m. \\\\\\
 \textbf{Example:}\\\\
 Given a 3CNF formula:  $f =  (x_1 \lor x_2 \lor x_3) \land (\lnot x_1 \lor \lnot x_2 \lor \lnot x_3) \land (\lnot x_1 \lor x_2 \lor x_3)$\\
-We construct the graph shown in figure 1. \\
+We construct the graph shown in figure 1. \\\\
 \includegraphics[scale=0.5]{independentset}
 \textbf{Figure 1:} Graph r(f) corresponding to the formula f\\\\\\
 \textbf{Analysis}\\
@@ -60,10 +60,13 @@ $\impliedby$ :\\ Given an independent set of size K of r(f), we need to show tha
 \textit{Read more in papadimitriou page 188-190.}
 \newpage
 \subsection{INDEPENDENT SET $\le$ CLIQUE}
-The independent set problem asks for a set of vertices of size K. So does the CLIQUE problem. While the independent set problem asks for a set S of vertices where there is no edge between any pair $u,v \in S$.
+The independent set problem asks for a maximum set of vertices of size K. So does the CLIQUE problem. While the independent set problem asks for a set S of vertices where there is no edge between any pair $u,v \in S$, the clique problem ask for the "opposite": a set S where any pair $u,v \in S$ DOES have an edge between them. So the reduction is trivial - we obtain a clique of size K when taking the complementary graph of an independent set of size K.\\\\
+\includegraphics[scale=0.5]{IStoCLIQ}\\
+\textbf{Figure 2:} The red nodes are the maximum independent set I - the dotted lines completes the complementary graph of I. A clique of same size.
 \\\\\\
 \textit{Read more in papadimitriou page 190.}
 \subsection{INDEPENDENT SET $\le$ VERTEX COVER}
+\includegraphics[scale=0.5]{IStoCOVER}
 \subsection{NAESAT $\le$ MAX CUT}
 \subsection{3SAT $\le$ HAMILTONIAN PATH}
 \subsection{HAMILTONIAN PATH $\le$ TSP}
