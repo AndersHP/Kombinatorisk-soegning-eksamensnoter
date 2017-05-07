@@ -42,7 +42,8 @@ and for all $(u,v) \in E$ we have $(u \in C \lor v \in C)$?
 \section{Reductions}
 As always, in a reduction $L_1 \le L_2$, we describe a polynomial time computable function r, such that $\forall x: x\in L_1 \iff r(x) \in L_2$. We then argue that it is indeed polynomial, and that both directions of the bi-implication holds.\\\\
 \subsection{3SAT $\le$ INDEPENDENT SET}
-We prove \textbf{Theorem 9.4: INDEPENDENT SET is NP-Complete}, by reducing from 3SAT, which we know is NP-Complete.\\\\
+\textbf{Theorem 9.4:} INDEPENDENT SET is NP-Complete\\\\
+We prove this by reducing from 3SAT, which we know is NP-Complete.\\\\
 For this reduction we need a gadget, the triangle. The logic behind this is that, if a graph contains a triangle, then at most one of the nodes can be in the independent set. We restrict the class of graphs we consider, to graphs whose nodes can be partitioned in m disjoint triangles. This ensures that an independent set can contain at most m nodes. \\
 
 For each of the m clauses in our input CNF formula, we create a triangle where the nodes are labeled with the literals of the clause. Next, we add an edge between two nodes in different triangles if and only if the nodes correspond to opposite literals. Adding these edges between opposite literals, ensures that we cannot pick both (as it would not be an independent set). The reduction is completed by setting the independent set goal K = m. \\\\\\
@@ -67,7 +68,15 @@ The independent set problem asks for a maximum set of vertices of size K. So doe
 \textit{Read more in papadimitriou page 190.}
 \subsection{INDEPENDENT SET $\le$ VERTEX COVER}
 \includegraphics[scale=0.5]{IStoCOVER}
+\newpage 
 \subsection{NAESAT $\le$ MAX CUT}
+\textbf{Theorem 9.5:} MAX CUT is NP-Complete\\\\
+We prove this by reducing from NAESAT, which we know is NP-complete.\\\\
+We construct a graph G = (V,E), and a goal K such that there is a way to separate the nodes og G in to two sets S and V-S with K or more edges  going from one set to the other, if and only if there is a truth assignment for our NAESAT formula f which satisfies f. We allow more than one edge between two vertices, and each such edge contributes one to the cut. 
+\\\\
+Our input formula has m clauses and n variables, and we constuct a graph with 2n nodes - one for each variable and it's negation. For each clause, we add edges to our graph to form triangles. If two literals of a clause are the same, for example $(x \lor y \lor y)$, (which is equivalent to $(x \lor y)$), we just add two edges between the nodes representing the two destinct literals. The point of the triangles and the two edges between same literals, is that for both constructs, the cut is always two. Now we add an edge between variables and it's negation, and set our target K = n + 2m. This completes the reduction.\\\\
+\textbf{Example:}\\\\
+Given a NAESAT formula:  $f =  (x_1 \lor x_2) \land (x_1 \lor \lnot x_3) \land (\lnot x_1 \lor \lnot x_2 \lor x_3)$\\
 \subsection{3SAT $\le$ HAMILTONIAN PATH}
 \subsection{HAMILTONIAN PATH $\le$ TSP}
 
