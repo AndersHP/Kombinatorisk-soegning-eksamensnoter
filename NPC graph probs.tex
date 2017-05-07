@@ -47,7 +47,7 @@ We prove this by reducing from 3SAT, which we know is NP-Complete.\\\\
 For this reduction we need a gadget, the triangle. The logic behind this is that, if a graph contains a triangle, then at most one of the nodes can be in the independent set. We restrict the class of graphs we consider, to graphs whose nodes can be partitioned in m disjoint triangles. This ensures that an independent set can contain at most m nodes. \\
 
 For each of the m clauses in our input CNF formula, we create a triangle where the nodes are labeled with the literals of the clause. Next, we add an edge between two nodes in different triangles if and only if the nodes correspond to opposite literals. Adding these edges between opposite literals, ensures that we cannot pick both (as it would not be an independent set). The reduction is completed by setting the independent set goal K = m. \\\\\\
-\textbf{Example:}\\\\
+\textbf{Example:}\\
 Given a 3CNF formula:  $f =  (x_1 \lor x_2 \lor x_3) \land (\lnot x_1 \lor \lnot x_2 \lor \lnot x_3) \land (\lnot x_1 \lor x_2 \lor x_3)$\\
 We construct the graph shown in figure 1. \\\\
 \includegraphics[scale=0.5]{independentset}
@@ -79,12 +79,25 @@ While independent set is a maximization problem, vertex cover is a minimization 
 We prove this by reducing from NAESAT, which we know is NP-complete.\\\\
 We construct a graph G = (V,E), and a goal K such that there is a way to separate the nodes og G in to two sets S and V-S with K or more edges  going from one set to the other, if and only if there is a truth assignment for our NAESAT formula f which satisfies f. We allow more than one edge between two vertices, and each such edge contributes one to the cut. 
 \\\\
-Our input formula has m clauses and n variables, and we constuct a graph with 2n nodes - one for each variable and it's negation. For each clause, we add edges to our graph to form triangles. If two literals of a clause are the same, for example $(x \lor y \lor y)$, (which is equivalent to $(x \lor y)$), we just add two edges between the nodes representing the two destinct literals. The point of the triangles and the two edges between same literals, is that for both constructs, the cut is always two. Now we add an edge between variables and it's negation, and set our target K = n + 2m. This completes the reduction.\\\\
-\textbf{Example:}\\\\
+Our input formula has m clauses and n variables, and we constuct a graph with 2n nodes - one for each variable and it's negation. For each clause, we add edges to our graph to form triangles. If two literals of a clause are the same, for example $(x \lor y \lor y)$, (which is equivalent to $(x \lor y)$), we just add two edges between the nodes representing the two destinct literals. The point of the triangles and the two edges between same literals, is that for both constructs, the cut is always two. Now we add an edge between variables and it's negation, and set our target K = n + 2m. \textbf{The n is for cutting the horizontal edges, and 2m is because we need to cut each triangle (each clause) - if we don't, then it is possible for all literals in a single clause to be true (and then it's not naesat))}. This completes the reduction.\\\\
+\textbf{Example:}\\
 Given a NAESAT formula:  $f =  (x_1 \lor x_2) \land (x_1 \lor \lnot x_3) \land (\lnot x_1 \lor \lnot x_2 \lor x_3)$\\
+We can construct the graph shown in figure 4. The green edges come from the first clause, red the second clause, and blue the third clause.\\
+\begin{center}
+\includegraphics[scale=0.5]{NAESATtoMAXCUT}\\
+\textbf{Figure 4:} Graph r(f) corresponding to the formula f
+\end{center}
+
+\textbf{Analysis:}\\
+For each variable we add two nodes and one edge between them. For each clause we add at most 3 edges. So the reduction is polynomial.\\\\
+$\implies$ :\\
+Given a satisfying naesat assignment for f, we must show that r(f) has a cut of size at least K. $x_1 = 1, x_2 = 0, x_3 = 1$ is a satisfying assignment for f. We have 3 variables and 3 clauses, so the target K is $2*3+3 = 9$. The cut of 9 is obtained by cutting the vertices within the dotted line in the example above. 
+\\\\
+$\impliedby$ :\\
+Given a cut of size at least K of r(f), we must show that there is a satisfying naesat assignment for x. Here we just take the truth values of the nodes in our cut set.
+\\\\\\
+\textit{Read more in papadimitriou page 191-192.}
 \subsection{3SAT $\le$ HAMILTONIAN PATH}
 \subsection{HAMILTONIAN PATH $\le$ TSP}
-
-
 
 \end{document}
