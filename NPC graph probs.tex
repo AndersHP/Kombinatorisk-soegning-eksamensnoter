@@ -66,9 +66,14 @@ The independent set problem asks for a maximum set of vertices of size K. So doe
 \textbf{Figure 2:} The red nodes are the maximum independent set I - the dotted lines completes the complementary graph of I. A clique of same size.
 \\\\\\
 \textit{Read more in papadimitriou page 190.}
+\newpage
 \subsection{INDEPENDENT SET $\le$ VERTEX COVER}
-\includegraphics[scale=0.5]{IStoCOVER}
-\newpage 
+While independent set is a maximization problem, vertex cover is a minimization problem. For a graph G = (V,E) and a max independent set $I \subseteq V$, the minimum vertex cover set is just $V-I$.\\\\
+\includegraphics[scale=0.5]{IStoCOVER}\\
+\textbf{Figure 3:} The red node forms the maximum independent set. The green form the minimal vertex cover.
+\\\\\\
+\textit{Read more in papadimitriou page 190.}
+\newpage
 \subsection{NAESAT $\le$ MAX CUT}
 \textbf{Theorem 9.5:} MAX CUT is NP-Complete\\\\
 We prove this by reducing from NAESAT, which we know is NP-complete.\\\\
