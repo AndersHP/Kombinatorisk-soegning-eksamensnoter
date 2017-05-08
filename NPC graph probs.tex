@@ -96,7 +96,25 @@ $\impliedby$ :\\
 Given a cut of size at least K of r(f), we must show that there is a satisfying naesat assignment for x. Here we just take the truth values of the nodes in our cut set.
 \\\\\\
 \textit{Read more in papadimitriou page 191-192.}
+\newpage
 \subsection{3SAT $\le$ HAMILTONIAN PATH}
-\subsection{HAMILTONIAN PATH $\le$ TSP}
+\textbf{Theorem 9.7:} HAMILTONIAN PATH is NP-Complete\\\\
+We prove this by reducing from 3SAT, which we know is NP-complete.\\\\
+We construct a graph G such that G has a Hamiltonian path if and only if the input 3sat formula has a satisfying assignment.\\\\
+For each variable we add a choice gadget and join them. For each clause we add a triangle where each edge corresponds to a literal in the clause. For each edge in the triangle, we add a consistency gadget from the edge, to the edge in the corresponding choice gadget. All nodes in all triangles belong to a clique together with the edge following the last choice gadget, and some other node which is the only one adjacent to the last edge in our path (see figure 6.)\\\\
+The important thing is that all triangle have at least one edge visited (or actually the 4 nodes on the edges) by the time we get to the clique member after the last choice gadget. If this is not the case then we cannot visit all nodes in a triangle without visiting one of the clique members twice. Recall that edges in the triangles represent literals in the clause - the edges we visit via the choice gadgets are the one for which the corresponding literal make the clause true, and so if no edge is visited, then the clause is false. This is consistent with the fact that we cannot make a hamiltonian cycle. \\\\
+Figure 5 show exactly what happens with the consistency gadget. Our path goes through nodes 1,2,3,4... and leaves at 12. It is clear that none of the black nodes are visited. \\\\
+\includegraphics[scale=0.5]{HAMConsistency}\\
+\textbf{Figure 5:} Zooming in on the consistency gadget between the choice gadget and the triangle.\\\\
+\textbf{Example:}\\
+Given a 3SAT formula  $f = (x_1 \lor x_2 \lor x_3) \land (\lnot x_1 \lor \lnot x_2 \lor x_3) \land (\lnot x_1 \lor \lnot x_2 \lor x_3)$\\
+We can construct a graph similar to the one in figure 6. For the satisfying assignment $x_1 = 1, x_2 = 0, x_3 = 0$, we can obtain a hamiltonian path by starting at 1, and follwing the pink line to 2.
+\begin{center}
+\includegraphics[scale=0.5, angle =-90]{3SATtoHAM}\\
+\textbf{Figure 6:} Graph r(f) corresponding to the formula f
+\end{center}
 
+\newpage
+\subsection{HAMILTONIAN PATH $\le$ TSP}
+//TODO
 \end{document}
