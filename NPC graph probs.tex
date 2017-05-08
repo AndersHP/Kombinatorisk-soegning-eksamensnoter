@@ -79,7 +79,7 @@ While independent set is a maximization problem, vertex cover is a minimization 
 We prove this by reducing from NAESAT, which we know is NP-complete.\\\\
 We construct a graph G = (V,E), and a goal K such that there is a way to separate the nodes og G in to two sets S and V-S with K or more edges  going from one set to the other, if and only if there is a truth assignment for our NAESAT formula f which satisfies f. We allow more than one edge between two vertices, and each such edge contributes one to the cut. 
 \\\\
-Our input formula has m clauses and n variables, and we constuct a graph with 2n nodes - one for each variable and it's negation. For each clause, we add edges to our graph to form triangles. If two literals of a clause are the same, for example $(x \lor y \lor y)$, (which is equivalent to $(x \lor y)$), we just add two edges between the nodes representing the two destinct literals. The point of the triangles and the two edges between same literals, is that for both constructs, the cut is always two. Now we add an edge between variables and it's negation, and set our target K = n + 2m. \textbf{The n is for cutting the horizontal edges, and 2m is because we need to cut each triangle (each clause) - if we don't, then it is possible for all literals in a single clause to be true (and then it's not naesat))}. This completes the reduction.\\\\
+Our input formula has m clauses and n variables, and we constuct a graph with 2n nodes - one for each variable and it's negation. For each clause, we add edges to our graph to form triangles. If two literals of a clause are the same, for example $(x \lor y \lor y)$, (which is equivalent to $(x \lor y)$), we just add two edges between the nodes representing the two destinct literals. The point of the triangles and the two edges between same literals, is that for both constructs, the cut is always two. Now we add an edge between variables and their negation, and set our target K = n + 2m. \textbf{The n is for cutting the horizontal edges, and 2m is because we need to cut each triangle (each clause) - if we don't, then it is possible for all literals in a single clause to be true (and then it's not naesat))}. This completes the reduction.\\\\
 \textbf{Example:}\\
 Given a NAESAT formula:  $f =  (x_1 \lor x_2) \land (x_1 \lor \lnot x_3) \land (\lnot x_1 \lor \lnot x_2 \lor x_3)$\\
 We can construct the graph shown in figure 4. The green edges come from the first clause, red the second clause, and blue the third clause.\\
@@ -87,7 +87,6 @@ We can construct the graph shown in figure 4. The green edges come from the firs
 \includegraphics[scale=0.5]{NAESATtoMAXCUT}\\
 \textbf{Figure 4:} Graph r(f) corresponding to the formula f
 \end{center}
-
 \textbf{Analysis:}\\
 For each variable we add two nodes and one edge between them. For each clause we add at most 3 edges. So the reduction is polynomial.\\\\
 $\implies$ :\\
