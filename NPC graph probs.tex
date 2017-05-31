@@ -53,7 +53,7 @@ We construct the graph shown in figure 1. \\\\
 \includegraphics[scale=0.5]{independentset}
 \textbf{Figure 1:} Graph r(f) corresponding to the formula f\\\\\\
 \textbf{Analysis}\\
-For each clause, we just create a triangle. Then we add at most $3 * (m-1)$ edges between the triangles - so the reduction is clearly polynomial.
+For each clause, we just create a triangle. Then we scan every pair of edges and add an edge if the labels are opposite - so the reduction is clearly polynomial.
 \\\\
 $\implies$ :\\ Given a satisfying assignment for the CNF formula f from above, we must show that the graph, r(f), has an indenpendent set of size K=m. The assignment: $x_1 = 0, x_2 = 1, x_3 = 0$ satisfies the formula, and for our indenpendent set of size K, we pick a node in each triangle which make the corresponding clause true. For the truth assignment we chose above, this means $x_2$ from triangle 1, $\lnot x_1$ in triangle 2, $\lnot x_1$ in triangle 3. (Note that this is not the only valid set since some clauses are satisfied by more than one literals).
 \\\\
