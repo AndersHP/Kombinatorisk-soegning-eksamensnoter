@@ -1,0 +1,120 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage[]{mathabx}
+
+\usepackage{titlesec}
+
+\title{KombSøg Eksamensnoter 2017}
+\author{Anders H Pedersen }
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+\newpage
+
+\section{P, NP and NPC.}
+
+\subsection{Beslutningsproblemer og stand-in sprog}
+I dette kursus har vi fokuseret på beslutningsproblemer, dvs. problemer hvor outputtet er yes/no.\\ Og vi har indført såkaldte stand-in sprog for de oprindelige sprog. Eksempelvis max cut, som er et optimerings problem hvor vi leder efte wr det største cut. I stand-in problemet får vi udover grafen også givet et target k, og vi spørger om der findes et cut af størrelse mindst k. Ideen er så at vi kan vise at stand-in sproget ikke har en effektiv algoritme, og dermed har det originale problem heller ikke stand-in sproget ikke er sværere end det originale(Hvis nogen påstår at det er nemmere så kan vi bruge algoritmen for det og sammenligne med vores target k, og dermed få et rigtigt svar).
+
+\subsection{P, NP, NPC}
+\includegraphics[scale=0.5]{asd.PNG}\\
+\textbf{P} er klassen af problemer som kan løses i poly-tid af en TM. Og når vi skal argumentere for at et problem er i P, så beskriver vi en effektiv algoritmer og referere til \textbf{Polynomial Church-Turing thesis} som siger noget om at noget kan løses af en TM i poly-tid hvis og kun hvis det kan i poly-tid af en "fornuftig beregningsmodel". \\\\
+\textbf{NP} er klassen af problemer hvor løsninger kan verificeres i poly-tid. P er en delmængde af NP: hvis vi kan finde en løsning i polynomiel tid så kan en given løsning tjekkes ved blot at løse problemet i poly-tid og ignorere et eventuelt certifikat. Når vi skal argumentere for at et problem er i NP skal vi således blot beskrive en poly-tids algoritme som verificerer løsninger.\\\\
+\textbf{NPC} er klassen af problemer som er i NP og som samtidig er NP-hard. At et problem er NP-Hard vil sige, at alle problemer i NP kan reduceres til dette. NPC er en særlig interessant klasse da den indeholder mange problemer som vi gerne vil løse, men også fordi at vi kan bruge den til at vise at nogle problemer bare ikke har en effektiv algoritme (under antagelse at $P\ne NP$). Dette kan vi gøre med en reduktion fra et problem som vi allerede ved at i NPC. 
+\subsection{Reduktioner}
+Vi har talt meget om reduktioner i kurset. Reduktioner bruges i dette kursus til at vise nogle ting om et sprog.\\
+En reduktion r mapper instanser fra et sprog til et andet, og vi skriver $L_1 \le L_2$ hvis vi kan beskrive en valid reduktion. Den er gyldig hvis udførselstiden er polynomiel, og hvis der gælder at $\forall x: x\in L_1 \iff r(x)\in L_2$. Vi bruger dette til at vise at nogle problemer er NP-complete. Ideen er, at hvis vi ved at der ikke findes en effektiv algoritme som løser $L_1$ (under antagelse at $P\ne NP$), og vi samtidig kan reducere $L_1$ til $L_2$, så kan der heller ikke findes en effektiv algoritme til at løse $L_2$ (da vi ellers lige har beskrevet en poly tids algoritme til $L_1$.)
+
+Kører i polytid da vi for hver iteration mindsker en clause med 1 literal indtil vi er færdige. \\\\
+$\implies$: Givet en satisfying assignment for F skal vi vise at F' også er satisfied. Vi ser på hvilke dele af F som gøre den satisfied, hvis det er $l_1$ eller $l_2$ så sætter vi y = 0 i $F'$. Hvis $l_1$ og $l_2$ ikke er variablerne som tilfredsstiller f, så må det være en af literals i A, så sætter vi y = 1.\\\\
+$\impliedby$: Givet at F' er tilfredsstillet så er F selvfølgelig også uanset sandhedsværdien af y.
+\subsection{3SAT $\le$ HAMILTONIAN PATH}
+\textbf{Theorem 9.7:} HAMILTONIAN PATH is NP-Complete\\\\
+We prove this by reducing from 3SAT, which we know is NP-complete.\\\\
+We construct a graph G such that G has a Hamiltonian path if and only if the input 3sat formula has a satisfying assignment.\\\\
+For each variable we add a choice gadget and join them. For each clause we add a triangle where each edge corresponds to a literal in the clause. For each edge in the triangle, we add a consistency gadget from the edge, to the edge in the corresponding choice gadget. All nodes in all triangles belong to a clique together with the edge following the last choice gadget, and some other node which is the only one adjacent to the last edge in our path (see figure 6.)\\\\
+The important thing is that all triangle have at least one edge visited (or actually the 4 nodes on the edges) by the time we get to the clique member after the last choice gadget. If this is not the case then we cannot visit all nodes in a triangle without visiting one of the clique members twice. Recall that edges in the triangles represent literals in the clause - the edges we visit via the choice gadgets are the one for which the corresponding literal make the clause true, and so if no edge is visited, then the clause is false. This is consistent with the fact that we cannot make a hamiltonian cycle. \\\\
+Figure 5 show exactly what happens with the consistency gadget. Our path goes through nodes 1,2,3,4... and leaves at 12. It is clear that none of the black nodes are visited. \\\\
+\includegraphics[scale=0.5]{HAMConsistency}\\
+\textbf{Figure 5:} Zooming in on the consistency gadget between the choice gadget and the triangle.\\\\
+\textbf{Example:}\\
+Given a 3SAT formula  $f = (x_1 \lor x_2 \lor x_3) \land (\lnot x_1 \lor \lnot x_2 \lor x_3) \land (\lnot x_1 \lor \lnot x_2 \lor x_3)$\\
+We can construct a graph similar to the one in figure 6. For the satisfying assignment $x_1 = 1, x_2 = 0, x_3 = 0$, we can obtain a hamiltonian path by starting at 1, and follwing the pink line to 2.
+\begin{center}
+\includegraphics[scale=0.5, angle =-90]{3SATtoHAM}\\
+\textbf{Figure 6:} Graph r(f) corresponding to the formula f
+\end{center}
+
+\newpage
+
+\section{Cook's theorem and the complexity of variants of SAT.}
+
+\subsection{Beslutningsproblemer og stand-in sprog}
+\subsection{P, NP, NPC}
+\subsection{Varianter af SAT}
+\begin{enumerate}
+    \item $SAT \in NPC$
+    \item $2SAT \in P$
+    \item $3SAT \in NPC$
+    \item $NAESAT \in NPC$
+    \item $MAX2SAT \in NPC$
+\end{enumerate}
+\subsection{Cook: $L \in NP \le Circuit SAT$}
+\subsection{Circuit SAT $\le$ SAT}
+Givet en boolean circuit C konstruerer vi en CNF formula r(C) som følger: 
+\subsection{Circuit SAT $\le$ NAESAT}
+Genbrug den forrige reduktion og tilføj literals til clauses med 1 og 2 literals (TODO SE BOG)
+\subsection{SAT $\le$ 3SAT}
+Givet en CNF formel som har clauses med mere eller mindre end 3 literals skal være gøre følgende for hver clause:\\
+\begin{enumerate}
+    \item Hvis en clause har 1 eller 2 literals, så kopierer vi bare en literal 2 eller 1 gang hhv. Eksempelvis $(x\lor y)$ bliver til $(x \lor y \lor y)$ dette ændrer ikke i semantikken af clausen.
+    \item Hvis en clause har mere end 3 literals gør følgende: $ F = (l_1 \lor l_2 \lor A)...$ hvor A er en OR af 2 eller flere literals. Vi indfører nu variabel y og laver nu $F' = (l_1 \lor l_2 \lor y) (\lnot y \lor A)$. Sådan fortsætter vi til A består af en OR af kun  2 literals, da vi så er færdige.
+    \end{enumerate}
+
+\subsection{2SAT $\in$ P}
+2SAT algoritme:\\
+Konstruer implikationsgraf ud fra en given 2SAT formel: Lav 2n noder, en node for hver variabel og dens negering. Tilføj derefter 2 kanter, $(\lnot a, b)$ og $(\lnot b,a)$ for hver clause $(a \lor b)$. Find stærke sammenhængskomponenter i grafen (cykler) i lineær tid. Tjek vha bfs/dfs for hver variabel om der er en cykel hvor både $x$ og $\lnot x$ indgår. Hvis sådan en variabel eksisterer, så er 2sat formlen unsatisfiable. I alt kan dette gøres i polynomiel tid.
+\begin{center}
+    \includegraphics[scale=0.7]{2sat2}
+\end{center}
+\subsection{3SAT $\le$ MAX2SAT}
+Givet en 3SAT formel konstruerer vi en MAX2SAT formel som følger: 
+\\
+For hver clause $C_i = (\alpha \lor \beta \lor \gamma)$, tilføj følgende 10 clauses:
+\begin{center}
+    $(\alpha)(\beta)(\gamma)(c_i)\\
+    (\lnot \alpha \lor \lnot \beta)(\lnot \beta \lor \lnot \gamma)(\lnot \alpha \lor \lnot \gamma)\\
+    (\alpha \lor \lnot c_i)(\beta \lor \lnot c_i)(\gamma \lor \lnot c_i)$
+\end{center}
+Så hvis 3SAT formlen har m clauses, så har r(x) 10m clauses. The MAX2SAT goal K is equal to 7m.\\\\
+Enhver tilfredsstillende assignment for $C_i$ vil tilfredsstille præcis 7 af de tilsvarende 2sat clauses i r(x). Hvis alle literals i 3SAT clausen evaluerer til true, så er hele den første og sidste række tilfredsstillet hvis vi sætter $c_i$ til true. Hvis 2 ud af 3 literals i 3SAT formlen er true, så er 2 clauses tilfredsstillet i hver række, og vi får den 7. uanset sandhedsværdien af $c_i$. Hvis kun en literal er tilfredsstillet er hele 2. række og 1 clause fra første og sidste række tilfredsstillet. Ved at sætte $c_i$ til false opnås 7 clauses.\\
+Hvis alle literals evaluerer til false kan max 6 clauses i vores konstruktion tilfredsstilles, hvilket er som ønsket. 
+
+\section{NP-complete graph problems.}
+\input{NPCGraphProbs}
+
+\newpage
+
+\section{NP-complete problems involving sets and numbers.}
+\input{NPCSetProbs}
+
+\newpage
+
+\section{Approximation algorithms.}
+\subsection{Disposition}
+\begin{enumerate}
+    \item ??
+\end{enumerate}
+\newpage
+\section{Problemer og flere reduktioner}
+\input{ProblemsAndMoreReductions}
+
+
+
+
+
+\end{document}
