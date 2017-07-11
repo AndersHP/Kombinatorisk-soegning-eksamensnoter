@@ -22,7 +22,7 @@ I dette kursus har vi fokuseret på beslutningsproblemer, dvs. problemer hvor ou
 
 \subsection{P, NP, NPC}
 \includegraphics[scale=0.5]{asd.PNG}\\
-\textbf{P} er klassen af problemer som kan løses i poly-tid af en TM. Og når vi skal argumentere for at et problem er i P, så beskriver vi en effektiv algoritmer og referere til \textbf{Polynomial Church-Turing thesis} som siger noget om at noget kan løses af en TM i poly-tid hvis og kun hvis det kan i poly-tid af en "fornuftig beregningsmodel". \\\\
+\textbf{P} er klassen af problemer som kan løses i poly-tid af en TM. Og når vi skal argumentere for at et problem er i P, så beskriver vi en effektiv algoritme og refererer til \textbf{Polynomial Church-Turing thesis} som siger noget om at noget kan løses af en TM i poly-tid hvis og kun hvis det kan i poly-tid af en "fornuftig beregningsmodel". \\\\
 \textbf{NP} er klassen af problemer hvor løsninger kan verificeres i poly-tid. P er en delmængde af NP: hvis vi kan finde en løsning i polynomiel tid så kan en given løsning tjekkes ved blot at løse problemet i poly-tid og ignorere et eventuelt certifikat. Når vi skal argumentere for at et problem er i NP skal vi således blot beskrive en poly-tids algoritme som verificerer løsninger.\\\\
 \textbf{NPC} er klassen af problemer som er i NP og som samtidig er NP-hard. At et problem er NP-Hard vil sige, at alle problemer i NP kan reduceres til dette. NPC er en særlig interessant klasse da den indeholder mange problemer som vi gerne vil løse, men også fordi at vi kan bruge den til at vise at nogle problemer bare ikke har en effektiv algoritme (under antagelse at $P\ne NP$). Dette kan vi gøre med en reduktion fra et problem som vi allerede ved at i NPC. 
 \subsection{Reduktioner}
@@ -65,15 +65,54 @@ We can construct a graph similar to the one in figure 6. For the satisfying assi
 \end{enumerate}
 \subsection{Cook: $L \in NP \le Circuit SAT$}
 \subsection{Circuit SAT $\le$ SAT}
-Givet en boolean circuit C konstruerer vi en CNF formula r(C) som følger: 
+SAT er et slags special case af Circuit SAT hvor det boolske circuit har en helt særlig struktur: En masse AND gates i toppen forbinder alle clauses og resultatet af disse AND gates går til en enkelt OUTPUT gate. Hver clause er OR af dens literals. Og hver literal er en ukendt INPUT gate eller negeringen af en.\\\\
+Givet en boolean circuit C konstruerer vi en CNF formula r(C) som følger:\\
+Vi ser på hver gate g og dens inputgates $h_1$ og $h_2$. Afhængig af gate typen laver vi følgende forskellige formler:
+\begin{enumerate}
+	\item AND: Følgende clauses som er logisk ækvivalente med $g \iff (h_1 \land h_2)$
+	\begin{center}
+		$(\lnot g \lor h_1)(\lnot g \lor h_2)(g \lor \lnot h_1 \lor \lnot h_2)$
+	\end{center}
+	 Første og anden clause tvinger g til at være 0 hvis $h_1$ eller $h_2$ er 0. Den sidste tvinger g til at være 1 hvis både $h_1$ og $h_2$ er 1.
+	\item OR: Følgende clauses som er logisk ækvivalente med $g \iff (h_1 \lor h_2)$
+	\begin{center}
+		$(g \lor \lnot h_1)(g \lor \lnot h_2)(\lnot g \lor  h_1 \lor h_2)$
+	\end{center}
+	Første og anden clause tvinger g til at være 1 hvis $h_1$ eller $h_2$ er 1. Sidste clause tvinger g til at være 0 hvis $h_1$ og $h_2$ er 0.
+	\item NOT: Følgende clauses som er logisk ævkivalente med $g \iff \lnot h$
+	\begin{center}
+		$(g \lor h)(\lnot g \lor \lnot h)$
+	\end{center}
+	Første clause sikrer at g er 1 hvis h er 0, og anden clause sikrer at g er 0 hvis h er 1.
+	\item COPY: Følgende clauses som er logisk ækvivalente med $g \iff h$
+	\begin{center}
+		$(g \lor  \lnot h)(\lnot g \lor h)$
+	\end{center}
+	Første clause tvinger g til at være 1 hvis h er 1. Anden clause tvinger g til at være 0 hvis h er 0.
+	\item CONSTANT: For constant gates tilføjes blot clause $(g)$ eller $(\lnot g)$ afhængig af om gaten er 1 eller 0 hhv. 
+	\item OUTPUT: For output gaten tilføjes clause $(g)$. Dermed kan formlen kun være true hvis denne variable og dermed output gaten er true.
+\end{enumerate}
+Poly tids reduktion da vi max laver 3 clauses for hver gate.\\\\
+$\implies$: \\
+Givet et tilfredsstillende input til vores Circuit C, hvis vi evaluerer C på dette input, så kan vi sætte boolean variable $g_j = G_j$ hvor $G_j$ er output af den j'te gate af C. Denne tildeling tilfredsstiller vores konstruerede formel.\\\\
+$\impliedby$: \\
+Givet en tilfredsstillende assignment til formlen F, giv input til Circuit C, den del af F som svarer til input gates i C. Det kan vises med induktion at output for gat j i C er lig med $g_j$ og dermed evaluerer C også til 1.
 \subsection{Circuit SAT $\le$ NAESAT}
-Genbrug den forrige reduktion og tilføj literals til clauses med 1 og 2 literals (TODO SE BOG)
+Genbrug den forrige reduktion og "fyld op" med ny literal z i clauses med 1 og 2 literals. Denne reduktion opfylder nu at $C \in CircuitSAT \iff r(C) \in NAESAT$. De clauses med 3 literals vi har genereret opfylder allerede NAESAT predikatet, og i de andre clauses bruger vi z til at opfylde vores NAESAT constraint. \\\\
+Tydeligvis i poly-tids reduktion.\\\
+$\implies$: \\
+Givet at C kan tilfredsstilles, så kan vi vise at r(C) også kan tilfredsstilles.
+Argumentet er delvist det samme som i forrige reduktion: \textit{"Givet et tilfredsstillende input til vores Circuit C, hvis vi evaluerer C på dette input, så kan vi sætte boolean variable $g_j = G_j$ hvor $G_j$ er output af den j'te gate af C."}
+Dvs alle clauses har automatisk mindst én sand literal. Og i denne reduktion bruger vi variablen z = false til at sørge for at clauses med 1 og 2 literals også har mindst én  falsk literale.
+$\impliedby$: \\
+Hvis der er en tildeling af sandhedsværdier som tilfredsstiller r(C) (i NAESAT forstand), så er det tydeligt at den complementære tildeling også tilfredsstiller i NAESAT forstand. En af disse tildelinger - den hvor z = false - tilfredsstiller også den originale r(C) (den uden z variablen), og dermed også det originale circuit C. \\\\
+
 \subsection{SAT $\le$ 3SAT}
 Givet en CNF formel som har clauses med mere eller mindre end 3 literals skal være gøre følgende for hver clause:\\
 \begin{enumerate}
     \item Hvis en clause har 1 eller 2 literals, så kopierer vi bare en literal 2 eller 1 gang hhv. Eksempelvis $(x\lor y)$ bliver til $(x \lor y \lor y)$ dette ændrer ikke i semantikken af clausen.
     \item Hvis en clause har mere end 3 literals gør følgende: $ F = (l_1 \lor l_2 \lor A)...$ hvor A er en OR af 2 eller flere literals. Vi indfører nu variabel y og laver nu $F' = (l_1 \lor l_2 \lor y) (\lnot y \lor A)$. Sådan fortsætter vi til A består af en OR af kun  2 literals, da vi så er færdige.
-    \end{enumerate}
+\end{enumerate}
 
 \subsection{2SAT $\in$ P}
 2SAT algoritme:\\

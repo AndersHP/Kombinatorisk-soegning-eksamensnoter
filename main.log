@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2017.5.5)  10 JUL 2017 19:52
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2017.5.5)  11 JUL 2017 19:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -731,16 +731,46 @@ File: 3SATtoHAM.jpg Graphic file (type jpg)
 Package pdftex.def Info: 3SATtoHAM.jpg used on input line 48.
 (pdftex.def)             Requested size: 321.19922pt x 240.8994pt.
  [5 <./HAMConsistency.png>] [6 <./3SATtoHAM.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 71--72
+Underfull \hbox (badness 10000) in paragraph at lines 68--71
 
  []
 
-[7] <2sat2.png, id=42, 283.81032pt x 218.31563pt>
+[7]
+Underfull \hbox (badness 10000) in paragraph at lines 95--100
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 95--100
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 101--109
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 101--109
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 101--109
+
+ []
+
+[8]
+Underfull \hbox (badness 10000) in paragraph at lines 111--112
+
+ []
+
+<2sat2.png, id=47, 283.81032pt x 218.31563pt>
 File: 2sat2.png Graphic file (type png)
  <use 2sat2.png>
-Package pdftex.def Info: 2sat2.png used on input line 81.
+Package pdftex.def Info: 2sat2.png used on input line 121.
 (pdftex.def)             Requested size: 198.66586pt x 152.81989pt.
-
+ [9 <./2sat2.png>]
 
 ! LaTeX Error: There's no line here to end.
 
@@ -748,8 +778,8 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.88     $(\alpha)(\beta)(\gamma)(c_i)\\
-                                        
+l.128     $(\alpha)(\beta)(\gamma)(c_i)\\
+                                         
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
@@ -757,16 +787,16 @@ or  <return>  to continue without it.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.88     $(\alpha)(\beta)(\gamma)(c_i)\\
-                                        
+l.128     $(\alpha)(\beta)(\gamma)(c_i)\\
+                                         
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 ! Missing } inserted.
 <inserted text> 
                 }
-l.88     $(\alpha)(\beta)(\gamma)(c_i)\\
-                                        
+l.128     $(\alpha)(\beta)(\gamma)(c_i)\\
+                                         
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
 With luck, this will get me unwedged. But if you
@@ -776,8 +806,8 @@ my insertion and my current dilemma will both disappear.
 ! Extra }, or forgotten \endgroup.
 \par ...m \@noitemerr {\@@par }\fi \else {\@@par }
                                                   \fi 
-l.88     $(\alpha)(\beta)(\gamma)(c_i)\\
-                                        
+l.128     $(\alpha)(\beta)(\gamma)(c_i)\\
+                                         
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
 you forgot something else, as in `\hbox{$x}'. In such cases
@@ -787,8 +817,8 @@ deleted material, e.g., by typing `I$}'.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.89     (\lnot
-                \alpha \lor \lnot \beta)(\lnot \beta \lor \lnot \gamma)(\lno...
+l.129     (\lnot
+                 \alpha \lor \lnot \beta)(\lnot \beta \lor \lnot \gamma)(\ln...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
@@ -799,7 +829,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.89 ... \gamma)(\lnot \alpha \lor \lnot \gamma)\\
+l.129 ...\gamma)(\lnot \alpha \lor \lnot \gamma)\\
                                                   
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -808,7 +838,7 @@ or  <return>  to continue without it.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.89 ... \gamma)(\lnot \alpha \lor \lnot \gamma)\\
+l.129 ...\gamma)(\lnot \alpha \lor \lnot \gamma)\\
                                                   
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -816,7 +846,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.89 ... \gamma)(\lnot \alpha \lor \lnot \gamma)\\
+l.129 ...\gamma)(\lnot \alpha \lor \lnot \gamma)\\
                                                   
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -827,7 +857,7 @@ my insertion and my current dilemma will both disappear.
 ! Extra }, or forgotten \endgroup.
 \par ...m \@noitemerr {\@@par }\fi \else {\@@par }
                                                   \fi 
-l.89 ... \gamma)(\lnot \alpha \lor \lnot \gamma)\\
+l.129 ...\gamma)(\lnot \alpha \lor \lnot \gamma)\\
                                                   
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -838,18 +868,18 @@ deleted material, e.g., by typing `I$}'.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.90     (\alpha
-                 \lor \lnot c_i)(\beta \lor \lnot c_i)(\gamma \lor \lnot c_i)$
+l.130     (\alpha
+                  \lor \lnot c_i)(\beta \lor \lnot c_i)(\gamma \lor \lnot c_i)$
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 92--95
+Underfull \hbox (badness 10000) in paragraph at lines 132--135
 
  []
 
 
-Overfull \hbox (7.33818pt too wide) in paragraph at lines 92--95
+Overfull \hbox (7.33818pt too wide) in paragraph at lines 132--135
 \OT1/cmr/m/n/10 Enhver til-fredsstil-lende as-sign-ment for $\OML/cmm/m/it/10 C
 []$ \OT1/cmr/m/n/10 vil til-fredsstille pr^^Z-cis 7 af de tilsvarende
  []
@@ -894,126 +924,131 @@ Underfull \hbox (badness 10000) in paragraph at lines 5--16
 
  []
 
-[8 <./2sat2.png>] [9]
+[10]
 File: 3SATtoHAM.jpg Graphic file (type jpg)
  <use 3SATtoHAM.jpg>
 Package pdftex.def Info: 3SATtoHAM.jpg used on input line 17.
 (pdftex.def)             Requested size: 321.19922pt x 240.8994pt.
- [10] [11]
-Underfull \hbox (badness 10000) in paragraph at lines 26--29
+ [11]
+Underfull \hbox (badness 10000) in paragraph at lines 20--26
+
+ []
+
+[12]
+Underfull \hbox (badness 10000) in paragraph at lines 31--34
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 26--29
+Underfull \hbox (badness 10000) in paragraph at lines 31--34
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 26--29
+Underfull \hbox (badness 10000) in paragraph at lines 31--34
 
  []
 
-<independentset.png, id=57, 816.04875pt x 237.88875pt>
+<independentset.png, id=61, 816.04875pt x 237.88875pt>
 File: independentset.png Graphic file (type png)
 
 <use independentset.png>
-Package pdftex.def Info: independentset.png used on input line 34.
+Package pdftex.def Info: independentset.png used on input line 39.
 (pdftex.def)             Requested size: 408.02338pt x 118.94408pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 30--43
+Underfull \hbox (badness 10000) in paragraph at lines 35--48
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 30--43
+Underfull \hbox (badness 10000) in paragraph at lines 35--48
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 30--43
+Underfull \hbox (badness 10000) in paragraph at lines 35--48
 
  []
 
 
-Overfull \hbox (63.02338pt too wide) in paragraph at lines 30--43
+Overfull \hbox (63.02338pt too wide) in paragraph at lines 35--48
 []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 30--43
+Underfull \hbox (badness 10000) in paragraph at lines 35--48
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 30--43
+Underfull \hbox (badness 10000) in paragraph at lines 35--48
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 30--43
+Underfull \hbox (badness 10000) in paragraph at lines 35--48
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 30--43
+Underfull \hbox (badness 10000) in paragraph at lines 35--48
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 30--43
+Underfull \hbox (badness 10000) in paragraph at lines 35--48
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 30--43
+Underfull \hbox (badness 10000) in paragraph at lines 35--48
 
  []
 
-[12 <./independentset.png>] [13]
-<IStoCLIQ.png, id=67, 583.17876pt x 292.09125pt>
+[13 <./independentset.png>] [14]
+<IStoCLIQ.png, id=70, 583.17876pt x 292.09125pt>
 File: IStoCLIQ.png Graphic file (type png)
  <use IStoCLIQ.png>
-Package pdftex.def Info: IStoCLIQ.png used on input line 46.
+Package pdftex.def Info: IStoCLIQ.png used on input line 51.
 (pdftex.def)             Requested size: 291.58867pt x 146.04526pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 45--50
+Underfull \hbox (badness 10000) in paragraph at lines 50--55
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 45--50
+Underfull \hbox (badness 10000) in paragraph at lines 50--55
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 45--50
+Underfull \hbox (badness 10000) in paragraph at lines 50--55
 
  []
 
-[14 <./IStoCLIQ.png>] <IStoCOVER.png, id=72, 583.17876pt x 292.09125pt>
+[15 <./IStoCLIQ.png>] <IStoCOVER.png, id=75, 583.17876pt x 292.09125pt>
 File: IStoCOVER.png Graphic file (type png)
 
 <use IStoCOVER.png>
-Package pdftex.def Info: IStoCOVER.png used on input line 53.
+Package pdftex.def Info: IStoCOVER.png used on input line 58.
 (pdftex.def)             Requested size: 291.58867pt x 146.04526pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 52--57
+Underfull \hbox (badness 10000) in paragraph at lines 57--62
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 52--57
+Underfull \hbox (badness 10000) in paragraph at lines 57--62
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 52--57
+Underfull \hbox (badness 10000) in paragraph at lines 57--62
 
  []
 
-[15 <./IStoCOVER.png>])
-Overfull \hbox (7.01129pt too wide) in paragraph at lines 98--98
+[16 <./IStoCOVER.png>])
+Overfull \hbox (7.01129pt too wide) in paragraph at lines 141--141
 |[]\OT1/cmr/bx/n/14.4 NP-complete prob-lems in-volv-ing sets and num-
  []
 
@@ -1027,7 +1062,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 5--6
 
  []
 
-<tripartite.png, id=77, 727.21687pt x 461.47406pt>
+<tripartite.png, id=80, 727.21687pt x 461.47406pt>
 File: tripartite.png Graphic file (type png)
  <use tripartite.png>
 Package pdftex.def Info: tripartite.png used on input line 8.
@@ -1052,7 +1087,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 12--14
 
  []
 
-[16 <./tripartite.png>] [17] <knapsack.png, id=85, 519.44063pt x 422.32782pt>
+[17 <./tripartite.png>] [18] <knapsack.png, id=88, 519.44063pt x 422.32782pt>
 File: knapsack.png Graphic file (type png)
 
 <use knapsack.png>
@@ -1083,7 +1118,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 25--33
 
  []
 
-[18 <./knapsack.png>]) (./ProblemsAndMoreReductions.tex
+[19 <./knapsack.png>]) [20] (./ProblemsAndMoreReductions.tex
 Underfull \hbox (badness 10000) in paragraph at lines 12--14
 
  []
@@ -1093,12 +1128,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 21--23
 
  []
 
-[19]
+
 Underfull \hbox (badness 10000) in paragraph at lines 24--26
 
  []
 
-[20]
+[21] [22]
 Underfull \hbox (badness 10000) in paragraph at lines 53--61
 
  []
@@ -1123,13 +1158,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 53--61
 
  []
 
-<NAESATtoMAXCUT.png, id=98, 384.43625pt x 404.51125pt>
+<NAESATtoMAXCUT.png, id=104, 384.43625pt x 404.51125pt>
 File: NAESATtoMAXCUT.png Graphic file (type png)
 
 <use NAESATtoMAXCUT.png>
 Package pdftex.def Info: NAESATtoMAXCUT.png used on input line 62.
 (pdftex.def)             Requested size: 192.21765pt x 202.25513pt.
- [21]
+ [23]
 Underfull \hbox (badness 10000) in paragraph at lines 65--74
 
  []
@@ -1149,15 +1184,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 65--74
 
  []
 
-[22 <./NAESATtoMAXCUT.png>]) (./main.aux) ) 
+[24 <./NAESATtoMAXCUT.png>]) (./main.aux) ) 
 Here is how much of TeX's memory you used:
- 3300 strings out of 493013
- 40712 string characters out of 6136994
- 105548 words of memory out of 5000000
- 6771 multiletter control sequences out of 15000+600000
+ 3301 strings out of 493013
+ 40720 string characters out of 6136994
+ 104548 words of memory out of 5000000
+ 6772 multiletter control sequences out of 15000+600000
  15648 words of font info for 52 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 39i,7n,28p,914b,196s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 39i,7n,28p,914b,230s stack positions out of 5000i,500n,10000p,200000b,80000s
 <c:/texlive/2016/texmf-dist/fonts/ty
 pe1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2016/texmf-dist/fonts/type1/publi
 c/amsfonts/cm/cmbx12.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/amsfont
@@ -1172,10 +1207,10 @@ x-type1/matha10.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/mathabx-type
 1/matha12.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/mathabx-type1/math
 a7.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/mathabx-type1/mathx10.pfb
 >
-Output written on main.pdf (22 pages, 945070 bytes).
+Output written on main.pdf (24 pages, 945619 bytes).
 PDF statistics:
- 151 PDF objects out of 1000 (max. 8388607)
- 93 compressed objects within 1 object stream
+ 157 PDF objects out of 1000 (max. 8388607)
+ 97 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  51 words of extra memory for PDF output out of 10000 (max. 10000000)
 

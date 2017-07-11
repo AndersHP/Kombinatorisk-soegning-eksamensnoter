@@ -17,7 +17,12 @@ We can construct a graph similar to the one in figure 6. For the satisfying assi
 \includegraphics[scale=0.5, angle =-90]{3SATtoHAM}\\
 \textbf{Figure 6:} Graph r(f) corresponding to the formula f
 \end{center}
-
+\textbf{Polynomial time reduction:}\\
+For each variable we make one choice gadget, and for each clause we make one triangle and 3 consistency gadgets.\\\\
+$\implies$: \\
+Given a satisfying assignment to the input formula f we can show that r(f) has a hamiltonian path: Simply follow the path though the choice gadgets which corresponds to the truth value of the variables. When reaching the clique node after the last choice gadget, we just jump around in the clique and travers the missing edges in each triangle and finally jump to node 3 and then finally 2. 
+$\impliedby$: \\
+Given that the graph has a hamiltonian path, we show that the input formula is satisfiable: Since there is only two nodes with degree one we can assume the path starts at node 1. Since we know the structure of the graph and the the given hamiltonian path, a truth assignment T is defined by the way the path traverse the choice gadgets and the consistency gadgets along the way. T satisfies the input formula.
 \newpage
 \subsection{HAMILTONIAN PATH $\le$ TSP}
 //TODO
