@@ -52,3 +52,4 @@
 \contentsline {subsection}{\numberline {6.14}SUBSET SUM (SPECIAL CASE OF KNAPSACK)}{22}
 \contentsline {subsection}{\numberline {6.15}BIN PACKING}{22}
 \contentsline {subsection}{\numberline {6.16}NAESAT $\le $ MAX CUT}{23}
+\contentsline {subsection}{\numberline {6.17}NAESAT $\le $ 3-COLORING}{24}

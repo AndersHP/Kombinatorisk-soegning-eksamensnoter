@@ -21,8 +21,8 @@ and for all $(u,v) \in E$ we have $(u \in C \lor v \in C)$?
 \textbf{Given:} Graph G = (V,E).\\
 \textbf{Question:} Does G have a path that visits every vertex exactly once?\\
 \subsection{TSP}
-\textbf{Given:} Distance matrix D, target t. \\
-\textbf{Question:} Is there a tour of length at most t that visits every node in the graph defined by D exactly once?\\
+\textbf{Given:} Distance matrix D, budget B. \\
+\textbf{Question:} Is there a tour of length at most B that visits every node in the graph defined by D exactly once?\\
 \subsection{SET COVERING}
 \textbf{Given:} 
 A set U(universe). A collection of subsets $S_1,S_2,...,S_n \subseteq U$\\
@@ -71,5 +71,7 @@ $\impliedby$ :\\
 Given a cut of size at least K of r(f), we must show that there is a satisfying naesat assignment for x. Here we just take the truth values of the nodes in our cut set.
 \\\\\\
 \textit{Read more in papadimitriou page 191-192.}
+\subsection{NAESAT $\le$ 3-COLORING}
+TODO
 \newpage
 

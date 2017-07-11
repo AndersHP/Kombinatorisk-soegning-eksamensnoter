@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2017.5.5)  11 JUL 2017 19:47
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2017.5.5)  11 JUL 2017 21:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -935,17 +935,27 @@ Underfull \hbox (badness 10000) in paragraph at lines 20--26
  []
 
 [12]
-Underfull \hbox (badness 10000) in paragraph at lines 31--34
+Underfull \hbox (badness 10000) in paragraph at lines 28--29
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 31--34
+Underfull \hbox (badness 10000) in paragraph at lines 28--29
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 31--34
+Underfull \hbox (badness 10000) in paragraph at lines 38--41
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 38--41
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 38--41
 
  []
 
@@ -953,97 +963,97 @@ Underfull \hbox (badness 10000) in paragraph at lines 31--34
 File: independentset.png Graphic file (type png)
 
 <use independentset.png>
-Package pdftex.def Info: independentset.png used on input line 39.
+Package pdftex.def Info: independentset.png used on input line 46.
 (pdftex.def)             Requested size: 408.02338pt x 118.94408pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 35--48
+Underfull \hbox (badness 10000) in paragraph at lines 42--55
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 35--48
+Underfull \hbox (badness 10000) in paragraph at lines 42--55
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 35--48
+Underfull \hbox (badness 10000) in paragraph at lines 42--55
 
  []
 
 
-Overfull \hbox (63.02338pt too wide) in paragraph at lines 35--48
+Overfull \hbox (63.02338pt too wide) in paragraph at lines 42--55
 []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 35--48
+Underfull \hbox (badness 10000) in paragraph at lines 42--55
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 35--48
+Underfull \hbox (badness 10000) in paragraph at lines 42--55
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 35--48
+Underfull \hbox (badness 10000) in paragraph at lines 42--55
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 35--48
+Underfull \hbox (badness 10000) in paragraph at lines 42--55
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 35--48
+Underfull \hbox (badness 10000) in paragraph at lines 42--55
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 35--48
+Underfull \hbox (badness 10000) in paragraph at lines 42--55
 
  []
 
 [13 <./independentset.png>] [14]
-<IStoCLIQ.png, id=70, 583.17876pt x 292.09125pt>
+<IStoCLIQ.png, id=71, 583.17876pt x 292.09125pt>
 File: IStoCLIQ.png Graphic file (type png)
  <use IStoCLIQ.png>
-Package pdftex.def Info: IStoCLIQ.png used on input line 51.
+Package pdftex.def Info: IStoCLIQ.png used on input line 58.
 (pdftex.def)             Requested size: 291.58867pt x 146.04526pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 50--55
+Underfull \hbox (badness 10000) in paragraph at lines 57--62
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 50--55
+Underfull \hbox (badness 10000) in paragraph at lines 57--62
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 50--55
+Underfull \hbox (badness 10000) in paragraph at lines 57--62
 
  []
 
-[15 <./IStoCLIQ.png>] <IStoCOVER.png, id=75, 583.17876pt x 292.09125pt>
+[15 <./IStoCLIQ.png>] <IStoCOVER.png, id=76, 583.17876pt x 292.09125pt>
 File: IStoCOVER.png Graphic file (type png)
 
 <use IStoCOVER.png>
-Package pdftex.def Info: IStoCOVER.png used on input line 58.
+Package pdftex.def Info: IStoCOVER.png used on input line 65.
 (pdftex.def)             Requested size: 291.58867pt x 146.04526pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 57--62
+Underfull \hbox (badness 10000) in paragraph at lines 64--69
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 57--62
+Underfull \hbox (badness 10000) in paragraph at lines 64--69
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 57--62
+Underfull \hbox (badness 10000) in paragraph at lines 64--69
 
  []
 
@@ -1062,7 +1072,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 5--6
 
  []
 
-<tripartite.png, id=80, 727.21687pt x 461.47406pt>
+<tripartite.png, id=81, 727.21687pt x 461.47406pt>
 File: tripartite.png Graphic file (type png)
  <use tripartite.png>
 Package pdftex.def Info: tripartite.png used on input line 8.
@@ -1087,7 +1097,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 12--14
 
  []
 
-[17 <./tripartite.png>] [18] <knapsack.png, id=88, 519.44063pt x 422.32782pt>
+[17 <./tripartite.png>] [18] <knapsack.png, id=89, 519.44063pt x 422.32782pt>
 File: knapsack.png Graphic file (type png)
 
 <use knapsack.png>
@@ -1192,7 +1202,7 @@ Here is how much of TeX's memory you used:
  6772 multiletter control sequences out of 15000+600000
  15648 words of font info for 52 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 39i,7n,28p,914b,230s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 39i,16n,28p,914b,230s stack positions out of 5000i,500n,10000p,200000b,80000s
 <c:/texlive/2016/texmf-dist/fonts/ty
 pe1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2016/texmf-dist/fonts/type1/publi
 c/amsfonts/cm/cmbx12.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/amsfont
@@ -1207,7 +1217,7 @@ x-type1/matha10.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/mathabx-type
 1/matha12.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/mathabx-type1/math
 a7.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/mathabx-type1/mathx10.pfb
 >
-Output written on main.pdf (24 pages, 945619 bytes).
+Output written on main.pdf (24 pages, 950533 bytes).
 PDF statistics:
  157 PDF objects out of 1000 (max. 8388607)
  97 compressed objects within 1 object stream
