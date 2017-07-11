@@ -26,17 +26,18 @@ Given that the graph has a hamiltonian path, we show that the input formula is s
 \newpage
 \subsection{HAMILTONIAN PATH $\le$ TSP}
 (with triangle inequality)\\
-Given a graph G with n nodes, we make a distance matrix $d_{ij}$ and a budget B such that there is a TSP tour of at most B iff G has a hamiltonian path.\\\\
+Given a graph G = (V,E) with n nodes, we make a distance matrix $d_{ij}$ and a budget B such that there is a TSP tour of at most B iff G has a hamiltonian path.\\\\
 We enter the distances into the matrix as described below, and set the budget B = n + 1
 \begin{gather*}  
 d_{ij}: 
 \begin{cases}
-  d_{ij} = 1 & \text{if there is an edge between nodes i and j}\\    
+  d_{ij} = 1 & \text{if (i,j)} \in E\\    
   d_{ij} = 2 & \text{else}
 \end{cases}
 \end{gather*}
+Polynomial time reduction since we just fill a n X n matrix, for each entry looking in E if there is a matching edge.\\\\
 $\implies$: \\
-Given a hamiltonian path in G we must show that r(G) has a TSP cycle of length at most n + 1. Just follow the hamiltonian path which has length n - 1, now follow an edge back to start, if it is in G then the total length is n, else it becomes n + 1 .   
+Given a hamiltonian path in G we must show that r(G) has a TSP cycle of length at most n + 1. Just follow the hamiltonian path which has length n - 1, now follow an edge back to start, if it is in G then the total length is n, else it becomes n + 1 .  \\\\
 $\impliedby$: \\
 If we have TSP tour of length at most n + 1 it must use at least n - 1 edges of G, and this will be our hamiltonian path. 
 \subsection{3SAT $\le$ INDEPENDENT SET}

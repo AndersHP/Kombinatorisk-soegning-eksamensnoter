@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2017.5.5)  11 JUL 2017 21:25
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2017.5.5)  11 JUL 2017 21:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -884,7 +884,7 @@ Overfull \hbox (7.33818pt too wide) in paragraph at lines 132--135
 []$ \OT1/cmr/m/n/10 vil til-fredsstille pr^^Z-cis 7 af de tilsvarende
  []
 
-(./NPCGraphProbs.tex
+[10] (./NPCGraphProbs.tex
 File: HAMConsistency.png Graphic file (type png)
  <use HAMConsistency.png>
 Package pdftex.def Info: HAMConsistency.png used on input line 11.
@@ -924,140 +924,145 @@ Underfull \hbox (badness 10000) in paragraph at lines 5--16
 
  []
 
-[10]
+[11]
 File: 3SATtoHAM.jpg Graphic file (type jpg)
  <use 3SATtoHAM.jpg>
 Package pdftex.def Info: 3SATtoHAM.jpg used on input line 17.
 (pdftex.def)             Requested size: 321.19922pt x 240.8994pt.
- [11]
+ [12]
 Underfull \hbox (badness 10000) in paragraph at lines 20--26
 
  []
 
-[12]
-Underfull \hbox (badness 10000) in paragraph at lines 28--29
+[13]
+Underfull \hbox (badness 10000) in paragraph at lines 28--31
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 28--29
+Underfull \hbox (badness 10000) in paragraph at lines 37--43
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 38--41
+Underfull \hbox (badness 10000) in paragraph at lines 37--43
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 38--41
+Underfull \hbox (badness 10000) in paragraph at lines 44--47
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 38--41
+Underfull \hbox (badness 10000) in paragraph at lines 44--47
 
  []
 
-<independentset.png, id=61, 816.04875pt x 237.88875pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 44--47
+
+ []
+
+<independentset.png, id=65, 816.04875pt x 237.88875pt>
 File: independentset.png Graphic file (type png)
 
 <use independentset.png>
-Package pdftex.def Info: independentset.png used on input line 46.
+Package pdftex.def Info: independentset.png used on input line 52.
 (pdftex.def)             Requested size: 408.02338pt x 118.94408pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 42--55
+Underfull \hbox (badness 10000) in paragraph at lines 48--61
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 42--55
+Underfull \hbox (badness 10000) in paragraph at lines 48--61
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 42--55
+Underfull \hbox (badness 10000) in paragraph at lines 48--61
 
  []
 
 
-Overfull \hbox (63.02338pt too wide) in paragraph at lines 42--55
+Overfull \hbox (63.02338pt too wide) in paragraph at lines 48--61
 []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 42--55
+Underfull \hbox (badness 10000) in paragraph at lines 48--61
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 42--55
+Underfull \hbox (badness 10000) in paragraph at lines 48--61
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 42--55
+Underfull \hbox (badness 10000) in paragraph at lines 48--61
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 42--55
+Underfull \hbox (badness 10000) in paragraph at lines 48--61
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 42--55
+Underfull \hbox (badness 10000) in paragraph at lines 48--61
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 42--55
+Underfull \hbox (badness 10000) in paragraph at lines 48--61
 
  []
 
-[13 <./independentset.png>] [14]
-<IStoCLIQ.png, id=71, 583.17876pt x 292.09125pt>
+[14] [15 <./independentset.png>]
+<IStoCLIQ.png, id=74, 583.17876pt x 292.09125pt>
 File: IStoCLIQ.png Graphic file (type png)
  <use IStoCLIQ.png>
-Package pdftex.def Info: IStoCLIQ.png used on input line 58.
+Package pdftex.def Info: IStoCLIQ.png used on input line 64.
 (pdftex.def)             Requested size: 291.58867pt x 146.04526pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 57--62
+Underfull \hbox (badness 10000) in paragraph at lines 63--68
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 57--62
+Underfull \hbox (badness 10000) in paragraph at lines 63--68
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 57--62
+Underfull \hbox (badness 10000) in paragraph at lines 63--68
 
  []
 
-[15 <./IStoCLIQ.png>] <IStoCOVER.png, id=76, 583.17876pt x 292.09125pt>
+[16 <./IStoCLIQ.png>] <IStoCOVER.png, id=79, 583.17876pt x 292.09125pt>
 File: IStoCOVER.png Graphic file (type png)
 
 <use IStoCOVER.png>
-Package pdftex.def Info: IStoCOVER.png used on input line 65.
+Package pdftex.def Info: IStoCOVER.png used on input line 71.
 (pdftex.def)             Requested size: 291.58867pt x 146.04526pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 64--69
+Underfull \hbox (badness 10000) in paragraph at lines 70--75
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 64--69
+Underfull \hbox (badness 10000) in paragraph at lines 70--75
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 64--69
+Underfull \hbox (badness 10000) in paragraph at lines 70--75
 
  []
 
-[16 <./IStoCOVER.png>])
+[17 <./IStoCOVER.png>])
 Overfull \hbox (7.01129pt too wide) in paragraph at lines 141--141
 |[]\OT1/cmr/bx/n/14.4 NP-complete prob-lems in-volv-ing sets and num-
  []
@@ -1072,7 +1077,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 5--6
 
  []
 
-<tripartite.png, id=81, 727.21687pt x 461.47406pt>
+<tripartite.png, id=84, 727.21687pt x 461.47406pt>
 File: tripartite.png Graphic file (type png)
  <use tripartite.png>
 Package pdftex.def Info: tripartite.png used on input line 8.
@@ -1097,7 +1102,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 12--14
 
  []
 
-[17 <./tripartite.png>] [18] <knapsack.png, id=89, 519.44063pt x 422.32782pt>
+[18 <./tripartite.png>] [19] <knapsack.png, id=93, 519.44063pt x 422.32782pt>
 File: knapsack.png Graphic file (type png)
 
 <use knapsack.png>
@@ -1128,7 +1133,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 25--33
 
  []
 
-[19 <./knapsack.png>]) [20] (./ProblemsAndMoreReductions.tex
+[20 <./knapsack.png>]) [21] (./ProblemsAndMoreReductions.tex
 Underfull \hbox (badness 10000) in paragraph at lines 12--14
 
  []
@@ -1143,7 +1148,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 24--26
 
  []
 
-[21] [22]
+[22] [23]
 Underfull \hbox (badness 10000) in paragraph at lines 53--61
 
  []
@@ -1168,13 +1173,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 53--61
 
  []
 
-<NAESATtoMAXCUT.png, id=104, 384.43625pt x 404.51125pt>
+<NAESATtoMAXCUT.png, id=107, 384.43625pt x 404.51125pt>
 File: NAESATtoMAXCUT.png Graphic file (type png)
 
 <use NAESATtoMAXCUT.png>
 Package pdftex.def Info: NAESATtoMAXCUT.png used on input line 62.
 (pdftex.def)             Requested size: 192.21765pt x 202.25513pt.
- [23]
+ [24]
 Underfull \hbox (badness 10000) in paragraph at lines 65--74
 
  []
@@ -1194,11 +1199,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 65--74
 
  []
 
-[24 <./NAESATtoMAXCUT.png>]) (./main.aux) ) 
+[25 <./NAESATtoMAXCUT.png>]) (./main.aux) ) 
 Here is how much of TeX's memory you used:
  3301 strings out of 493013
  40720 string characters out of 6136994
- 104548 words of memory out of 5000000
+ 105548 words of memory out of 5000000
  6772 multiletter control sequences out of 15000+600000
  15648 words of font info for 52 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1217,10 +1222,10 @@ x-type1/matha10.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/mathabx-type
 1/matha12.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/mathabx-type1/math
 a7.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/mathabx-type1/mathx10.pfb
 >
-Output written on main.pdf (24 pages, 950533 bytes).
+Output written on main.pdf (25 pages, 955640 bytes).
 PDF statistics:
- 157 PDF objects out of 1000 (max. 8388607)
- 97 compressed objects within 1 object stream
+ 161 PDF objects out of 1000 (max. 8388607)
+ 100 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  51 words of extra memory for PDF output out of 10000 (max. 10000000)
 
