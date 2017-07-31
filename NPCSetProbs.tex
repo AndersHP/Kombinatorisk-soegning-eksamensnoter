@@ -12,10 +12,13 @@ There are always L extra homes in this construction, and to make sure they can b
 \\
 \textbf{Polynomial:} For each variable we make a gadget with at most m boys/girls and 2m homes. For each clause we make a b/g pair. And for each extra home another b/g pair. So it is polynomial.
 \\\\
-$\implies:$ \\ TODO
+$\implies:$ \\ 
+Given a satisfying assignment for input formula, we must show that our construction has a valid matching.\\
+See example above. Given the truth assignment $x_1 = 1, x_2 = 0, x_3 = 0$, first, in the gadgets, pick the triples with the homes corresponding to the opposite of the assignment. After this, match the clause b/g pair with a leftover home from the gadgets. And in the end, match remaining homes with the "easy to match" b/g pairs.  
 \\\\ 
-$\impliedby:$ \\ TODO
-
+$\impliedby:$ \\  
+Given r(x) has a matching, show that the input formula x is satisfiable.\\
+Look at the homes paired with the claus b/g pairs. These give us a satisfying assignment.
 \newpage
 \subsection{Corollary: EXACT COVER BY 3-SETS, SET COVERING AND SET PACKING ARE NP COMPLETE}
 TRIPARTITE MATCHING is a special case of EXACT COVER BY 3-SETS. And EXACT COVER BY 3-SETS is a special case of both SET COVER and SET PACKING.\\\\ (https://people.eecs.berkeley.edu/~vazirani/algorithms/chap8.pdf)
