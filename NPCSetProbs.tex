@@ -2,11 +2,20 @@
 \subsection{P, NP, NPC}
 \subsection{Reduktioner}
 \subsection{3SAT $\le$ TRIPARTITE MATCHING}
-For this reduction we use a combined  and consistency gadget. We create one for each variable $x_i$. Each one of such gadget will have k boys, k girls and 2k homes. Where k is equal to the highest occurrence of $x_i$ or $\lnot x_i$.\\\\
+For this reduction we use a combined choice- and consistency gadget. We create one for each variable $x_i$. Each one of such gadget will have k boys, k girls and 2k homes. Where k is equal to the highest occurrence of $x_i$ or $\lnot x_i$.
+The uneven numbered homes represent occurrences of x, and the other of $\lnot x$. The boys and girls of these gadgets are only paired with the homes of the same gadget. If a matching exists then $b_i$ is matched with either $g_i$ and $h_{2i}$, or to $g_{i-1}$ and $h_{2i-1}$. The first matching is taken to mean that x = 1 and the second that x = 0.
+\\\\
+For each clause we add another pair of boy and girl. These will be paired with the corresponding literals in the gadgets. The idea is that if one of these three homes was left unoccupied when the variables were assigned truth values, this means that it corresponds to a true literal, and therefore the clause is satisfied. \textbf{If all three literals in c are false, then the corresponding b/g pair cannot be matched with a home.} \\\\
+There are always L extra homes in this construction, and to make sure they can be matched, we introduce L more boy/girl pairs. These pairs all paired with every home in the construction. So these L boy/girl pairs are "easy to please" and are just used to pair the leftover homes. \\\\
 
-For each clause we add another pa\\\\
 \includegraphics[scale=0.5]{tripartite}
-\newpage
+\\
+\textbf{Polynomial:} TODO
+\\\\
+$\implies:$ \\ TODO
+\\\\ 
+$\impliedby:$ \\ TODO
+
 \newpage
 \subsection{Corollary: EXACT COVER BY 3-SETS, SET COVERING AND SET PACKING ARE NP COMPLETE}
 TRIPARTITE MATCHING is a special case of EXACT COVER BY 3-SETS. And EXACT COVER BY 3-SETS is a special case of both SET COVER and SET PACKING.\\\\ (https://people.eecs.berkeley.edu/~vazirani/algorithms/chap8.pdf)
