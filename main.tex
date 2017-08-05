@@ -151,10 +151,40 @@ Hvis alle literals evaluerer til false kan max 6 clauses i vores konstruktion ti
     \item Approximations algoritmer
     \item Approx schemes
     \item Algo design 
+    \item vertex cover
     \item TSP
 \end{enumerate}
 \newpage
 \subsection{P, NP, NPC}
+\subsection{Løsninger af NPC problemer}
+NPC indeholder mange problemer som vi gerne vil løse på en eller anden måde. Vi har følgende muligheder:
+\begin{itemize}
+	\item Små instanser kan ofte løses selvom udførselstiden er exponentiel
+	\item Der kan være nogle special cases instanser som kan løses i polynomiel tid		\item Heuristics
+	\item Approximations algoritmer	
+\end{itemize}
+\subsection{Approx. algoritmer}
+En approximerings algoritme returnerer en valid løsning men som ikke er optimal. Den kører i polynomiel tid.\\
+
+En algoritme for et givent problem har en approximations ratio p(n) hvis, for alle inputs af størrelse n,  den returnerede løsning med cost C er indenfor en faktor p(n) af den optimale løsning med cost $C^*$:
+\begin{center}
+$max(\frac{C}{C^*},\frac{C^*}{C})\le p(n)$
+\end{center}
+\subsection{Approx. schemes}
+\subsection{Design}
+\subsection{Vertex cover}
+Følgende algoritme er en 2-Approximations algoritme. 
+\begin{center}
+	\includegraphics[scale=0.7]{ApproxVertexCover}
+\end{center}
+Bevis:\\
+Først og fremmest så returnerer algoritmen en valid node cover: for hver iteration vælges en tilfældig kant, og alle kanter som ligger op af de to noder bliver fjernet. Dette sker indtil der ikke er flere kanter, og dermed er alle kanter dækket.\\\\
+Lad A være de tilfældigt udvalgte kanter som vælges i linje 4. For alle noder i A må mindst én af endpoint noderne være i $C^*$, dermed har vi en lower bound på den optimale løsning:
+\begin{center}
+	$|C^*| \ge |A|$
+\end{center}
+
+\subsection{TSP}
 \section{Problemer og flere reduktioner}
 \input{ProblemsAndMoreReductions}
 
