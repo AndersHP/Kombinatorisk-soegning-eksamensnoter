@@ -29,9 +29,6 @@ I dette kursus har vi fokuseret på beslutningsproblemer, dvs. problemer hvor ou
 Vi har talt meget om reduktioner i kurset. Reduktioner bruges i dette kursus til at vise nogle ting om et sprog.\\
 En reduktion r mapper instanser fra et sprog til et andet, og vi skriver $L_1 \le L_2$ hvis vi kan beskrive en valid reduktion. Den er gyldig hvis udførselstiden er polynomiel, og hvis der gælder at $\forall x: x\in L_1 \iff r(x)\in L_2$. Vi bruger dette til at vise at nogle problemer er NP-complete. Ideen er, at hvis vi ved at der ikke findes en effektiv algoritme som løser $L_1$ (under antagelse at $P\ne NP$), og vi samtidig kan reducere $L_1$ til $L_2$, så kan der heller ikke findes en effektiv algoritme til at løse $L_2$ (da vi ellers lige har beskrevet en poly tids algoritme til $L_1$.)
 
-Kører i polytid da vi for hver iteration mindsker en clause med 1 literal indtil vi er færdige. \\\\
-$\implies$: Givet en satisfying assignment for F skal vi vise at F' også er satisfied. Vi ser på hvilke dele af F som gøre den satisfied, hvis det er $l_1$ eller $l_2$ så sætter vi y = 0 i $F'$. Hvis $l_1$ og $l_2$ ikke er variablerne som tilfredsstiller f, så må det være en af literals i A, så sætter vi y = 1.\\\\
-$\impliedby$: Givet at F' er tilfredsstillet så er F selvfølgelig også uanset sandhedsværdien af y.
 \subsection{3SAT $\le$ HAMILTONIAN PATH}
 \textbf{Theorem 9.7:} HAMILTONIAN PATH is NP-Complete\\\\
 We prove this by reducing from 3SAT, which we know is NP-complete.\\\\
@@ -48,7 +45,12 @@ We can construct a graph similar to the one in figure 6. For the satisfying assi
 \includegraphics[scale=0.5, angle =-90]{3SATtoHAM}\\
 \textbf{Figure 6:} Graph r(f) corresponding to the formula f
 \end{center}
-
+\textbf{Polynomial time reduction:}\\
+For each variable we make one choice gadget, and for each clause we make one triangle and 3 consistency gadgets.\\\\
+$\implies$: \\
+Given a satisfying assignment to the input formula f we can show that r(f) has a hamiltonian path: Simply follow the path though the choice gadgets which corresponds to the truth value of the variables. When reaching the clique node after the last choice gadget, we just jump around in the clique and travers the missing edges in each triangle and finally jump to node 3 and then finally 2. 
+$\impliedby$: \\
+Given that the graph has a hamiltonian path, we show that the input formula is satisfiable: Since there is only two nodes with degree one we can assume the path starts at node 1. Since we know the structure of the graph and the the given hamiltonian path, a truth assignment T is defined by the way the path traverse the choice gadgets and the consistency gadgets along the way. T satisfies the input formula since it makes sure one edge is visited in each triangle. 
 \newpage
 
 \section{Cook's theorem and the complexity of variants of SAT.}
@@ -103,7 +105,7 @@ Tydeligvis i poly-tids reduktion.\\\
 $\implies$: \\
 Givet at C kan tilfredsstilles, så kan vi vise at r(C) også kan tilfredsstilles.
 Argumentet er delvist det samme som i forrige reduktion: \textit{"Givet et tilfredsstillende input til vores Circuit C, hvis vi evaluerer C på dette input, så kan vi sætte boolean variable $g_j = G_j$ hvor $G_j$ er output af den j'te gate af C."}
-Dvs alle clauses har automatisk mindst én sand literal. Og i denne reduktion bruger vi variablen z = false til at sørge for at clauses med 1 og 2 literals også har mindst én  falsk literale.
+Dvs alle clauses har automatisk mindst én sand literal. Og i denne reduktion bruger vi variablen z = false til at sørge for at clauses med 1 og 2 literals også har mindst én  falsk literale.\\\\
 $\impliedby$: \\
 Hvis der er en tildeling af sandhedsværdier som tilfredsstiller r(C) (i NAESAT forstand), så er det tydeligt at den complementære tildeling også tilfredsstiller i NAESAT forstand. En af disse tildelinger - den hvor z = false - tilfredsstiller også den originale r(C) (den uden z variablen), og dermed også det originale circuit C. \\\\
 
@@ -113,7 +115,9 @@ Givet en CNF formel som har clauses med mere eller mindre end 3 literals skal v�
     \item Hvis en clause har 1 eller 2 literals, så kopierer vi bare en literal 2 eller 1 gang hhv. Eksempelvis $(x\lor y)$ bliver til $(x \lor y \lor y)$ dette ændrer ikke i semantikken af clausen.
     \item Hvis en clause har mere end 3 literals gør følgende: $ F = (l_1 \lor l_2 \lor A)...$ hvor A er en OR af 2 eller flere literals. Vi indfører nu variabel y og laver nu $F' = (l_1 \lor l_2 \lor y) (\lnot y \lor A)$. Sådan fortsætter vi til A består af en OR af kun  2 literals, da vi så er færdige.
 \end{enumerate}
-
+Kører i polytid da vi for hver iteration mindsker en clause med 1 literal indtil vi er færdige. \\\\
+$\implies$: Givet en satisfying assignment for F skal vi vise at F' også er satisfied. Vi ser på hvilke dele af F som gøre den satisfied, hvis det er $l_1$ eller $l_2$ så sætter vi y = 0 i $F'$. Hvis $l_1$ og $l_2$ ikke er variablerne som tilfredsstiller f, så må det være en af literals i A, så sætter vi y = 1.\\\\
+$\impliedby$: Givet at F' er tilfredsstillet så er F selvfølgelig også uanset sandhedsværdien af y.
 \subsection{2SAT $\in$ P}
 2SAT algoritme:\\
 Konstruer implikationsgraf ud fra en given 2SAT formel: Lav 2n noder, en node for hver variabel og dens negering. Tilføj derefter 2 kanter, $(\lnot a, b)$ og $(\lnot b,a)$ for hver clause $(a \lor b)$. Find stærke sammenhængskomponenter i grafen (cykler) i lineær tid. Tjek vha bfs/dfs for hver variabel om der er en cykel hvor både $x$ og $\lnot x$ indgår. Hvis sådan en variabel eksisterer, så er 2sat formlen unsatisfiable. I alt kan dette gøres i polynomiel tid.
@@ -172,6 +176,7 @@ $max(\frac{C}{C^*},\frac{C^*}{C})\le p(n)$
 \end{center}
 \subsection{Approx. schemes}
 \subsection{Design}
+
 \subsection{Vertex cover}
 Følgende algoritme er en 2-Approximations algoritme. 
 \begin{center}
@@ -183,8 +188,52 @@ Lad A være de tilfældigt udvalgte kanter som vælges i linje 4. For alle noder
 \begin{center}
 	$|C^*| \ge |A|$
 \end{center}
+Hver gang vi udvælger en kant i linje 4, så inkluderer vi 2 noder i vores vertex cover. Dermed har vi:
+\begin{center}
+	$|C| = 2|A|$
+\end{center}
+Ved at kombinere disse kan vi udlede at denne algoritme er en 2-approximations algoritme:
+\begin{center}
+ 	$|C| = 2|A|$
+ 	\\ \qquad  $\le 2|C^*|$
+\end{center}
+Ovenstående siger os at cost af den producerede løsning maximalt kan være 2 gange cost af optimal løsning.
+\subsection{Metric TSP}
+Følgende er en beskrivelse af en 2-approximations algoritme til TSP som overholder trekantsuligheden.\\ (Dvs cost funktionen $c(A) = \sum\limits_{(u,v)\in A } c(u,v)$\\ tilfredstiller at for alle noder $u,v,w \in V: c(u,w) \le c(u,v) + c(v,w)$ )\\
+\begin{center}
+	\includegraphics[scale=0.7]{tspApprox}
+\end{center}
 
-\subsection{TSP}
+Algoritmen genererer et minimum spanning tree vha prims algoritme $(O(|V^2|))$, og returnerer en hamiltonian path bestående af  en noderne besøgt i en depth first preorder traversal af dette træ.\\ 
+
+\begin{center}
+	\includegraphics[scale=0.5]{ApproxMetricTSP}\\ Eksempel\\
+	\includegraphics[scale=0.5]{tspMetricOptimal}\\ Optimal 
+\end{center}
+\textbf{2-approximation:} Lad $H^*$ være en optimal tour. Hvis vi fjerner en kant fra en tour, så får vi et spanning tree. Derfor kan vi bruge vægten af et MST T som lower bound:
+\begin{center}
+ $c(T) \le c(H^*)$
+\end{center}
+Et full preorder walk FW lister knuderne hver gang de besøges. Det er let at se at hver kant i træet traverseres præcis 2 gange. Dermed har vi:
+\begin{center}
+	$c(FW) = 2c(T)$
+\end{center}
+Og ved at kombinere disse to får vi:
+\begin{center}
+	$c(FW) \le 2c(H^*)$ 
+\end{center}
+Altså at costen af vores full walk er indenfor en faktor af  2 af costen af en optimal tour. Men FW er ikke en tour da den besøger nogle noder mere end 1 gang. Dog kan vi bruge vores antagelse omkring trekantsuligheden, og slette noder i vores full walk uden at øge costen. Derfor sletter vi alle "anden forekomster" af noder i vores full walk, og den resterende liste udgør en tour. For eksemplet ovenfor reduceres listen:
+\begin{center}
+	a,b,c,b,h,b,a,d,e,f,e,g,e,d,a $\rightarrow$ a,b,c,h,d,e,f,g
+\end{center}
+Den reducerede liste udgør nu vores approximative tour H som returneres af algoritmen. Da H er opnået ved at slette noder fra full walk FW ved vi at costen af H er mindre eller lig med costen af FW:
+\begin{center}
+	$c(H) \le c(FW)$
+\end{center}
+Og ved at kombinere dette og det forrige udtryk kan vi konkludere at:
+\begin{center}
+	$c(H) \le 2c(H^*)$
+\end{center}
 \section{Problemer og flere reduktioner}
 \input{ProblemsAndMoreReductions}
 
