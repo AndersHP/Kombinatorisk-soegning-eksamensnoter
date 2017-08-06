@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2017.5.5)  5 AUG 2017 20:21
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2017.5.5)  6 AUG 2017 12:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1218,12 +1218,31 @@ File: tspMetricOptimal.png Graphic file (type png)
 Package pdftex.def Info: tspMetricOptimal.png used on input line 211.
 (pdftex.def)             Requested size: 108.40472pt x 97.48897pt.
  [24 <./tspApprox.png> <./ApproxMetricTSP.png>]
-(./ProblemsAndMoreReductions.tex [25 <./tspMetricOptimal.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 12--14
+Underfull \hbox (badness 10000) in paragraph at lines 238--241
 
  []
 
 
+Underfull \hbox (badness 10000) in paragraph at lines 238--241
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 238--241
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 238--241
+
+ []
+
+[25 <./tspMetricOptimal.png>] (./ProblemsAndMoreReductions.tex
+Underfull \hbox (badness 10000) in paragraph at lines 12--14
+
+ []
+
+[26]
 Underfull \hbox (badness 10000) in paragraph at lines 21--23
 
  []
@@ -1233,7 +1252,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 24--26
 
  []
 
-[26]
+[27]
 Underfull \hbox (badness 10000) in paragraph at lines 53--61
 
  []
@@ -1258,7 +1277,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 53--61
 
  []
 
-[27] <NAESATtoMAXCUT.png, id=130, 384.43625pt x 404.51125pt>
+[28] <NAESATtoMAXCUT.png, id=133, 384.43625pt x 404.51125pt>
 File: NAESATtoMAXCUT.png Graphic file (type png)
 
 <use NAESATtoMAXCUT.png>
@@ -1284,7 +1303,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 65--74
 
  []
 
-[28 <./NAESATtoMAXCUT.png>] [29]) (./main.aux) ) 
+[29 <./NAESATtoMAXCUT.png>]) (./main.aux) ) 
 Here is how much of TeX's memory you used:
  3338 strings out of 493013
  41447 string characters out of 6136994
@@ -1293,22 +1312,22 @@ Here is how much of TeX's memory you used:
  15648 words of font info for 52 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  39i,16n,28p,914b,230s stack positions out of 5000i,500n,10000p,200000b,80000s
-<c:/texlive/2016/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2016/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmbx12.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmmi10.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmmi12.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pf
-b><c:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texl
-ive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2016/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2016/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2016/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmti10.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/mathabx-ty
-pe1/matha10.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/mathabx-type1/ma
-tha12.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/mathabx-type1/matha5.p
-fb><c:/texlive/2016/texmf-dist/fonts/type1/public/mathabx-type1/matha7.pfb><c:/
-texlive/2016/texmf-dist/fonts/type1/public/mathabx-type1/mathx10.pfb>
-Output written on main.pdf (29 pages, 1063202 bytes).
+<c:/texlive/2016/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2016/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmbx12.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmmi10.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi
+12.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:
+/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2
+016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2016/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2016/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2016/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmsy10.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmti10.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/mathabx-type1/m
+atha10.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/mathabx-type1/matha12
+.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/mathabx-type1/matha5.pfb><c
+:/texlive/2016/texmf-dist/fonts/type1/public/mathabx-type1/matha7.pfb><c:/texli
+ve/2016/texmf-dist/fonts/type1/public/mathabx-type1/mathx10.pfb>
+Output written on main.pdf (29 pages, 1080743 bytes).
 PDF statistics:
  190 PDF objects out of 1000 (max. 8388607)
  114 compressed objects within 2 object streams

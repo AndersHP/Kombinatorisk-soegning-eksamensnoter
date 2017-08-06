@@ -234,6 +234,34 @@ Og ved at kombinere dette og det forrige udtryk kan vi konkludere at:
 \begin{center}
 	$c(H) \le 2c(H^*)$
 \end{center}
+\subsection{Generel TSP approx?}
+Hvis vi ikke antager at trekantsuligheden holder, så kan det vises at der ikke kan eksistere en $\rho$-approximerings algoritme for $\rho \ge 1$ med mindre $P = NP$.\\\\
+Beviset er et modstridsbevis. Vi antager at der for et tal $\rho \ge 1$ eksisterer en polytids approximations algoritme A med approx ration $\rho$. Uden tab af generalitet kan vi antage at $\rho$ er et heltal (ved at runde op ellers). Vi viser nu, at vi så kan bruge A til at løse HAM cycle problemet i polynomiel tid, hvilket vil medføre at P = NP.\\\\
+Lad $G = (V,E)$ være en HAM CYCLE instans. Vi ønsker at finde ud af om G indeholder en HAM cycle vha. A. \\\\
+
+Vi laver nu instansen om til en TSP instanse på følgende måde:\\
+Lad $G' = (V',E')$ være en komplet graf, dvs $E'$ indeholder alle tænkelige kanter, altså:
+\begin{center}
+	$E' = \{(u,v):u,v\in V \text{og} \ u \neq v\}$
+\end{center} 
+Tilføj en cost til hver kant i $E'$ på følgende måde:
+\begin{gather*}  
+c(u,v)= 
+\begin{cases}
+  1 & \text{if (u,v)} \in E\\    
+  \rho |V| +1 & \text{else}
+\end{cases}
+\end{gather*}
+Repræsentationer af G' og c kan laves af G i tid polynomielt i |V| og |E|.\\\\
+
+Hvis man ser på TSP problemet (G',c), så er det klart at hvis den den originale graf G havde en HAM cycle H, så har cost funktionen c nu hivet hver kant i H cost 1, og (G',c) har dermed en tour med cost |V|. Hvis ikke G havde en HAM cycle, så må en tour i G' bruge en af de "dyre" kanter, som ikke var i det originale E. Men sådan en tour må have en cost på mindst:
+\begin{center}
+	$(\rho |V| +1) + (|V|-1) = \rho |V| + |V|  > \rho |V|$
+\end{center}
+Fordi de kanter som ikke er i E er så dyre, så er det et gap på mindst |V| af cost ved en tour some også er en HAM cycle i G, og en some ikke er.\\
+
+Hvis vi nu kører A på (G',c), så er A garanteret at returnere en tour med cost max $\rho$ gange cost af optimal tour. Så hvis G indeholder en HAM cycle, så returnerer A den. Hvis G ikke indeholder en HAM cycle, så returner A en tour med cost der er højere end p|V|. A kan derfor bruges til at løse HAM cycle problemer i polynomiel tid.
+
 \section{Problemer og flere reduktioner}
 \input{ProblemsAndMoreReductions}
 
